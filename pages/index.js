@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Flex, Box, Text, Button } from "@chakra-ui/react";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
+import { Property } from "../components/Property.jsx";
+
 const Banner = ({
   purpose,
   title1,
@@ -12,9 +14,9 @@ const Banner = ({
   linkName,
   imageUrl,
 }) => (
-  <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
+  <Flex flexWrap="wrap" justifyContent="left" alignItems="center" m="10">
     <Image src={imageUrl} width={500} height={300} alt="banner" />
-    <Box p="5">
+    <Box p="15">
       <Text color="gray.500" fontSize="sm" fontWeight="medium">
         {purpose}
       </Text>
@@ -36,7 +38,6 @@ const Banner = ({
 );
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  console.log(propertiesForSale, propertiesForRent);
   return (
     <Box>
       <Banner
@@ -51,7 +52,11 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         "
       />
 
-      <Flex flexWrap="wrap">{/*fetching the properties*/}</Flex>
+      <Flex flexWrap="wrap">
+        {propertiesForRent.map((property) => (
+          <Property property={property} key={property.id} />
+        ))}
+      </Flex>
 
       <Banner
         purpose="BUY A HOME"
@@ -64,7 +69,9 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008
         "
       />
-      {/*fetching the properties*/}
+      {propertiesForSale.map((property) => (
+        <Property property={property} key={property.id} />
+      ))}
     </Box>
   );
 }
