@@ -1,8 +1,4 @@
-#Property comonent
-
 //added property component t store al the values of the property from API
-
-
 
 import Link from "next/link";
 import Image from "next/image";
