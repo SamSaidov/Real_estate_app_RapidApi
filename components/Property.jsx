@@ -1,4 +1,4 @@
-//added property component t store al the values of the property from API
+//added property component to store al the values of the property from API
 
 import Link from "next/link";
 import Image from "next/image";
@@ -56,7 +56,7 @@ const Property = ({
           </Box>
         </Flex>
         <Flex
-          allignItems="center"
+          alignItems="center"
           p="1"
           justifyContent="space-between"
           w="250"
