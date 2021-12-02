@@ -47,11 +47,28 @@ const Property = ({
               {isVerified && <GoVerified />}
             </Box>
             <Text fontWeight="bold" fontSize="lg">
-              AED {price}
+              AED {millify(price)}
               {rentFrequency && `/${rentFrequency}`}
             </Text>
           </Flex>
+          <Box>
+            <Avatar size="sm" src={agency?.logo?.url} />
+          </Box>
         </Flex>
+        <Flex
+          allignItems="center"
+          p="1"
+          justifyContent="space-between"
+          w="250"
+          colot="blue.400"
+        >
+          {rooms} <FaBed /> | {baths}
+          <FaBath /> | {millify(area)} sqft
+          <BsGridFill />
+        </Flex>
+        <Text fontsize="lg">
+          {title.length > 30 ? `${title.substring(0, 30)}...` : title}
+        </Text>
       </Box>
     </Flex>
   </Link>
