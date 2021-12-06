@@ -1,5 +1,5 @@
-//search page filters for sale and for rent pages too
-
+// search page filters for sale and for rent pages too
+//
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Image } from "next/image";
