@@ -27,7 +27,7 @@ const Navbar = () => (
           as={IconButton}
           icon={<FcMenu />}
           variant="outlined"
-          color="red.400"
+          color="red.500"
         />
         <MenuList>
           <Link href="/" passHref>
