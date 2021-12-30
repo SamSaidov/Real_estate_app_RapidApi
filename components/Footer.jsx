@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-
+//regular footer
 const Footer = () => (
   <Box
     textAlign="center"
