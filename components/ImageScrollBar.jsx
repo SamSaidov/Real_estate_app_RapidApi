@@ -8,7 +8,7 @@ import {
   FaArrowCircleLeft,
 } from "react-icons/fa";
 import image from "next/image";
-
+//slider
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
   return (
