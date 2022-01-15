@@ -11,9 +11,7 @@ import noresult from "../assets/noresult.svg";
 import { fetchApi, baseUrl } from "../utils/fetchApi";
 
 // searching functionality
-
 //create function component
-
 
 const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
