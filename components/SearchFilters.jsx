@@ -14,7 +14,7 @@ import { MdCancel } from "react-icons/md";
 import Image from "next/image";
 
 import { filterData, getFilterValues } from "../utils/filterData";
-
+//useState to update the filter selection
 const SearchFilters = () => {
   const [filters, setFilters] = useState(filterData);
   const router = useRouter();
